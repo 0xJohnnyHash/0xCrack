@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+build/
+dist/
+*.spec
+
+# 0xCrack artifacts
+demo_hashes.txt
+demo_report.*
+*.session
+report.html
+report.json
+# Never commit recovered plaintext passwords
+cracked.txt
+*.pot
+
+# Large wordlists (do NOT commit rockyou.txt & co.)
+wordlists/*.txt
+!wordlists/sample.txt
+
+# Keep the bundled breach list tracked (data/common_passwords.txt)
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "0xcrack"
+version = "1.0.0"
+description = "Smart console password auditor — auto hash detection, crack-time estimate, offline breach check and HTML/JSON audit reports."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Johnny Hash", email = "" }]
+keywords = ["security", "password", "cracking", "audit", "ethical-hacking", "infosec", "cli"]
+dependencies = [
+    "rich>=13.0",
+    "passlib>=1.7.4",
+    "bcrypt>=4.0",
+]
+
+[project.scripts]
+# After `pip install -e .` you can run the tool as `0xcrack`.
+"0xcrack" = "oxcrack.cli:main"
+
+[tool.setuptools]
+packages = ["oxcrack", "oxcrack.core", "oxcrack.report", "oxcrack.tui"]
+
+[tool.setuptools.package-data]
+oxcrack = ["../data/common_passwords.txt", "../wordlists/sample.txt"]
